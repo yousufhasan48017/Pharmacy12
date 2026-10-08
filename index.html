@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indus Hospital — Pharmacy Worklist</title>
+<title>Meridian General — Pharmacy Worklist</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -39,7 +39,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .brand-name{font-size:14px;font-weight:600;}
 .brand-sub{font-size:11px;color:var(--text2);margin-top:1px;}
 .header-right{display:flex;align-items:center;gap:1rem;}
-.live-chip{display:flex;align-items:center;gap:6px;background:var(--success-bg);border:.5px solid var(--success-border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:500;color:var(--success);}
+.demo-chip{display:inline-flex;align-items:center;padding:4px 10px;border-radius:100px;
+  border:1px solid #d7b36a;background:rgba(215,179,106,.14);color:#8a6414;
+  font-size:11px;font-weight:600;letter-spacing:.04em;white-space:nowrap;margin-right:8px}.live-chip{display:flex;align-items:center;gap:6px;background:var(--success-bg);border:.5px solid var(--success-border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:500;color:var(--success);}
 .live-dot{width:6px;height:6px;border-radius:50%;background:#639922;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .shift-text{text-align:right;font-size:11px;color:var(--text2);line-height:1.7;}
@@ -245,17 +247,18 @@ tr:last-child td{border-bottom:none;}
   <!-- HEADER -->
   <div class="header">
     <div class="brand">
-      <div class="logo">IH</div>
+      <div class="logo">MG</div>
       <div>
-        <div class="brand-name">Indus Hospital &amp; Health Network</div>
+        <div class="brand-name">Meridian General Hospital</div>
         <div class="brand-sub">Pharmacy Department — Worklist</div>
       </div>
     </div>
     <div class="header-right">
+      <div class="demo-chip">Sample data</div>
       <div class="live-chip"><span class="live-dot"></span>Live</div>
       <div class="shift-text">
         <span id="cur-date"></span><br>
-        Morning shift &nbsp;07:00–15:00 &nbsp;·&nbsp; <strong style="color:var(--text)">Karachi Main Campus</strong>
+        Morning shift &nbsp;07:00–15:00 &nbsp;·&nbsp; <strong style="color:var(--text)">Main Campus</strong>
       </div>
     </div>
   </div>
@@ -363,7 +366,7 @@ tr:last-child td{border-bottom:none;}
           <div class="sc"><div class="sav sav-t">KM</div><div class="sn">Khalid Mirza</div><div class="sr">Senior Technician</div><div class="ss"><span class="dot don"></span>On duty</div><div class="sstats">Active Rx: <span>5</span> Labels: <span>9</span></div></div>
           <div class="sc"><div class="sav sav-t">NR</div><div class="sn">Nadia Rehman</div><div class="sr">Pharmacy Technician</div><div class="ss"><span class="dot dbrk"></span>Break until 10:30</div><div class="sstats">Active Rx: <span>3</span> Labels: <span>4</span></div></div>
           <div class="sc"><div class="sav sav-i">HF</div><div class="sn">Hamza Farooq</div><div class="sr">Pharmacy Intern</div><div class="ss"><span class="dot don"></span>On duty</div><div class="sstats">Supervised: <span>2</span> Filing: <span>ongoing</span></div></div>
-          <div class="sc"><div class="sav sav-p">LK</div><div class="sn">Dr. Layla Khan</div><div class="sr">Clinical Pharmacist</div><div class="ss"><span class="dot don"></span>Ward 4 rounds</div><div class="sstats">Reviews: <span>3</span> Consults: <span>5</span></div></div>
+          <div class="sc"><div class="sav sav-p">LK</div><div class="sn">Dr. N. Farooq</div><div class="sr">Clinical Pharmacist</div><div class="ss"><span class="dot don"></span>Ward 4 rounds</div><div class="sstats">Reviews: <span>3</span> Consults: <span>5</span></div></div>
           <div class="sc"><div class="sav sav-t">ZA</div><div class="sn">Zara Anwar</div><div class="sr">Pharmacy Technician</div><div class="ss"><span class="dot doff"></span>Off shift</div><div class="sstats">Returns: <span>afternoon</span></div></div>
         </div>
       </div>
@@ -392,7 +395,7 @@ tr:last-child td{border-bottom:none;}
       </div>
     </div>
   </div>
-  <div class="footer">Indus Hospital &amp; Health Network · Pharmacy Department · Prototype v3.0 · For internal review only</div>
+  <div class="footer">Meridian General Hospital · Pharmacy Department · Portfolio demonstration · Sample data, not real patients</div>
 </div>
  
 <!-- DISPENSE MODAL -->
@@ -417,7 +420,7 @@ tr:last-child td{border-bottom:none;}
         <label class="m-lbl">Dispensed by</label>
         <select class="m-input" id="dm-by">
           <option>Dr. Sara Ahmed</option><option>Khalid Mirza</option>
-          <option>Nadia Rehman</option><option>Hamza Farooq</option><option>Dr. Layla Khan</option>
+          <option>Nadia Rehman</option><option>Hamza Farooq</option><option>Dr. N. Farooq</option>
         </select>
       </div>
       <div class="m-field">
@@ -465,7 +468,7 @@ tr:last-child td{border-bottom:none;}
         <label class="m-lbl">Raised by</label>
         <select class="m-input" id="rm-by">
           <option>Dr. Sara Ahmed</option><option>Khalid Mirza</option>
-          <option>Nadia Rehman</option><option>Hamza Farooq</option><option>Dr. Layla Khan</option>
+          <option>Nadia Rehman</option><option>Hamza Farooq</option><option>Dr. N. Farooq</option>
         </select>
       </div>
     </div>
@@ -484,20 +487,20 @@ document.getElementById("cur-date").textContent = new Date().toLocaleDateString(
 // Simulate patient arrival times (minutes ago)
 const baseTime = Date.now();
 let rx = [
-  {id:"RX-00412",patient:"Fatima Al-Rashid",doctor:"Dr. Imran Siddiqui",drug:"Metformin",dose:"850mg tabs",days:30,qOrd:60,qAvail:120,avail:"In stock",pri:"Routine",status:"Dispensed",arrivedMinsAgo:52},
-  {id:"RX-00413",patient:"Omar Siddiqui",doctor:"Dr. Ayesha Noor",drug:"Atorvastatin",dose:"40mg tabs",days:30,qOrd:30,qAvail:88,avail:"In stock",pri:"Routine",status:"Dispensed",arrivedMinsAgo:44},
-  {id:"RX-00414",patient:"ICU — Bed 3",doctor:"Dr. Kamran Baig",drug:"Norepinephrine",dose:"4mg/250mL IV",days:1,qOrd:2,qAvail:0,avail:"Out of stock",pri:"STAT",status:"Reorder raised",arrivedMinsAgo:39},
-  {id:"RX-00415",patient:"Aisha Qureshi",doctor:"Dr. Sara Malik",drug:"Amoxicillin",dose:"500mg caps",days:7,qOrd:21,qAvail:60,avail:"Low stock",pri:"Routine",status:"In progress",arrivedMinsAgo:24},
-  {id:"RX-00416",patient:"Ward 2 — Bed 8",doctor:"Dr. Faisal Raza",drug:"Vancomycin",dose:"IV 1g",days:5,qOrd:20,qAvail:8,avail:"Low stock",pri:"Urgent",status:"In progress",arrivedMinsAgo:18},
-  {id:"RX-00420",patient:"Emergency — Triage 2",doctor:"Dr. Kamran Baig",drug:"Morphine",dose:"10mg IV",days:1,qOrd:3,qAvail:0,avail:"Out of stock",pri:"STAT",status:"In progress",arrivedMinsAgo:14},
-  {id:"RX-00418",patient:"CCU — Bed 1",doctor:"Dr. Kamran Baig",drug:"Heparin",dose:"25,000 units IV",days:1,qOrd:2,qAvail:14,avail:"In stock",pri:"STAT",status:"Waiting",arrivedMinsAgo:9},
-  {id:"RX-00422",patient:"Ward 4 — Bed 12",doctor:"Dr. Layla Khan",drug:"Furosemide",dose:"40mg IV",days:3,qOrd:6,qAvail:22,avail:"In stock",pri:"Urgent",status:"Waiting",arrivedMinsAgo:7},
-  {id:"RX-00424",patient:"Pediatrics — Bed 3",doctor:"Dr. Ayesha Noor",drug:"Paracetamol syrup",dose:"120mg/5mL",days:5,qOrd:3,qAvail:7,avail:"Low stock",pri:"Urgent",status:"Waiting",arrivedMinsAgo:5},
-  {id:"RX-00417",patient:"Tariq Hassan",doctor:"Dr. Ayesha Noor",drug:"Warfarin",dose:"3mg tabs",days:28,qOrd:28,qAvail:200,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:4},
-  {id:"RX-00419",patient:"Sana Malik",doctor:"Dr. Imran Siddiqui",drug:"Salbutamol",dose:"Inhaler 100mcg",days:30,qOrd:2,qAvail:45,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:2},
-  {id:"RX-00421",patient:"Bilal Chaudhry",doctor:"Dr. Sara Malik",drug:"Lisinopril",dose:"5mg tabs",days:30,qOrd:30,qAvail:310,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:2},
-  {id:"RX-00423",patient:"Hira Baig",doctor:"Dr. Faisal Raza",drug:"Levothyroxine",dose:"50mcg tabs",days:30,qOrd:30,qAvail:95,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:1},
-  {id:"RX-00425",patient:"Asad Noor",doctor:"Dr. Imran Siddiqui",drug:"Omeprazole",dose:"20mg caps",days:14,qOrd:14,qAvail:180,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:1},
+  {id:"RX-00412",patient:"Fatima Al-Rashid",doctor:"Dr. K. Shah",drug:"Metformin",dose:"850mg tabs",days:30,qOrd:60,qAvail:120,avail:"In stock",pri:"Routine",status:"Dispensed",arrivedMinsAgo:52},
+  {id:"RX-00413",patient:"Omar Siddiqui",doctor:"Dr. H. Jamil",drug:"Atorvastatin",dose:"40mg tabs",days:30,qOrd:30,qAvail:88,avail:"In stock",pri:"Routine",status:"Dispensed",arrivedMinsAgo:44},
+  {id:"RX-00414",patient:"ICU — Bed 3",doctor:"Dr. A. Mahmood",drug:"Norepinephrine",dose:"4mg/250mL IV",days:1,qOrd:2,qAvail:0,avail:"Out of stock",pri:"STAT",status:"Reorder raised",arrivedMinsAgo:39},
+  {id:"RX-00415",patient:"MRN 40218",doctor:"Dr. T. Aslam",drug:"Amoxicillin",dose:"500mg caps",days:7,qOrd:21,qAvail:60,avail:"Low stock",pri:"Routine",status:"In progress",arrivedMinsAgo:24},
+  {id:"RX-00416",patient:"Ward 2 — Bed 8",doctor:"Dr. R. Siddiq",drug:"Vancomycin",dose:"IV 1g",days:5,qOrd:20,qAvail:8,avail:"Low stock",pri:"Urgent",status:"In progress",arrivedMinsAgo:18},
+  {id:"RX-00420",patient:"Emergency — Triage 2",doctor:"Dr. A. Mahmood",drug:"Morphine",dose:"10mg IV",days:1,qOrd:3,qAvail:0,avail:"Out of stock",pri:"STAT",status:"In progress",arrivedMinsAgo:14},
+  {id:"RX-00418",patient:"CCU — Bed 1",doctor:"Dr. A. Mahmood",drug:"Heparin",dose:"25,000 units IV",days:1,qOrd:2,qAvail:14,avail:"In stock",pri:"STAT",status:"Waiting",arrivedMinsAgo:9},
+  {id:"RX-00422",patient:"Ward 4 — Bed 12",doctor:"Dr. N. Farooq",drug:"Furosemide",dose:"40mg IV",days:3,qOrd:6,qAvail:22,avail:"In stock",pri:"Urgent",status:"Waiting",arrivedMinsAgo:7},
+  {id:"RX-00424",patient:"Pediatrics — Bed 3",doctor:"Dr. H. Jamil",drug:"Paracetamol syrup",dose:"120mg/5mL",days:5,qOrd:3,qAvail:7,avail:"Low stock",pri:"Urgent",status:"Waiting",arrivedMinsAgo:5},
+  {id:"RX-00417",patient:"MRN 40226",doctor:"Dr. H. Jamil",drug:"Warfarin",dose:"3mg tabs",days:28,qOrd:28,qAvail:200,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:4},
+  {id:"RX-00419",patient:"MRN 40231",doctor:"Dr. K. Shah",drug:"Salbutamol",dose:"Inhaler 100mcg",days:30,qOrd:2,qAvail:45,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:2},
+  {id:"RX-00421",patient:"MRN 40244",doctor:"Dr. T. Aslam",drug:"Lisinopril",dose:"5mg tabs",days:30,qOrd:30,qAvail:310,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:2},
+  {id:"RX-00423",patient:"MRN 40259",doctor:"Dr. R. Siddiq",drug:"Levothyroxine",dose:"50mcg tabs",days:30,qOrd:30,qAvail:95,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:1},
+  {id:"RX-00425",patient:"Asad Noor",doctor:"Dr. K. Shah",drug:"Omeprazole",dose:"20mg caps",days:14,qOrd:14,qAvail:180,avail:"In stock",pri:"Routine",status:"Waiting",arrivedMinsAgo:1},
 ];
  
 // Sort: STAT > Urgent > Routine, then by wait time desc, completed last
